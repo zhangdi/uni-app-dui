@@ -1,9 +1,15 @@
 <template>
-    <view class="dui-list-item" :class="[{'clickable': true}]" @click="onClick">
-        <view></view>
-        <view class="dui-list-item-content">{{title}}</view>
-        <view v-if="showArrow" class="dui-list-item-arrow">
-            <dui-icon type="angle-right" color="#ABABAB" size="56rpx"></dui-icon>
+    <view class="dui-list-item" :class="[{'clickable': isClickable}]" @click="onClick">
+        <block v-if="icon">
+            <view class="dui-list-item-icon">
+                <dui-icon :type="icon" :size="iconSize" :color="iconColor"></dui-icon>
+            </view>
+        </block>
+        <view class="dui-list-item-container">
+            <view class="dui-list-item-content">{{title}}</view>
+            <view v-if="isShowArrow" class="dui-list-item-arrow">
+                <dui-icon type="angle-right" color="#ABABAB" size="56rpx"></dui-icon>
+            </view>
         </view>
     </view>
 </template>
@@ -20,9 +26,30 @@
                 type: String,
             },
             showArrow: {
-                type: Boolean,
+                type: [String, Boolean],
                 default: false
             },
+            clickable: {
+                type: [String, Boolean],
+                default: true
+            },
+            icon: String,
+            iconSize: {
+                type: Number,
+                default: 32
+            },
+            iconColor: {
+                type: String,
+                default: '#7A7B7C'
+            }
+        },
+        computed: {
+            isClickable() {
+                return String(this.clickable) == 'true';
+            },
+            isShowArrow() {
+                return String(this.showArrow) == 'true';
+            }
         },
         data() {
             return {
@@ -45,9 +72,6 @@
         display: flex;
         align-items: center;
         font-size: $dui-font-size-base;
-        min-height: 48px;
-        
-        @include border-bottom();
 
         &.clickable:active {
             background-color: rgba(0, 0, 0, .075);
@@ -55,14 +79,29 @@
 
     }
 
-    .dui-list-item-content {
+    .dui-list-item-icon {
+        display: flex;
+        align-items: center;
+    }
+
+    .dui-list-item-container {
+        min-height: 48px;
         padding: 0 $dui-spacing-row-base;
         flex: 1;
         font-size: $dui-font-size-base;
+        display: flex;
+        align-items: center;
+
+        @include border-bottom();
     }
 
-    .dui-list-item-arrow {
-        margin-left: $dui-spacing-row-base;
-        margin-right: $dui-spacing-row-base;
+    .dui-list-item-content {
+        flex: 1;
     }
+
+    .dui-list-item-icon {
+        margin-left: $dui-spacing-row-base;
+    }
+
+    .dui-list-item-arrow {}
 </style>
