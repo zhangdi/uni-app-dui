@@ -1,0 +1,51 @@
+/* 颜色 */
+$dui-color-white: #FFF;
+$dui-color-blue: #1E88E5;
+$dui-color-green: #43A047;
+$dui-color-red: #E53935;
+$dui-color-pink: #D81B60;
+$dui-color-purple: #8E24AA;
+$dui-color-orange: #FB8C00;
+$dui-color-light: #BDBDBD;
+
+$dui-color-secondary: #666;
+
+/* 文字尺寸 */
+$dui-font-size-sm: $uni-font-size-sm;
+$dui-font-size-base: $uni-font-size-base;
+$dui-font-size-lg: 36rpx;
+
+/* 行为颜色 */
+$dui-color-primary: $dui-color-blue;
+$dui-color-success: #4cd964;
+$dui-color-warning: #f0ad4e;
+$dui-color-error: #dd524d;
+
+/* 文字颜色 */
+$dui-text-color-primary: #333;
+$dui-text-color-secondary: $dui-color-secondary;
+$dui-text-color-hint: #777879;
+
+/* 背景颜色 */
+$dui-bg-color: $uni-bg-color;
+$dui-bg-color-white: $dui-color-white;
+$dui-bg-color-grey: $uni-bg-color-grey;
+$dui-bg-color-hover: $uni-bg-color-hover;
+$dui-bg-color-mask: $uni-bg-color-mask;
+
+/* 边框颜色 */
+$dui-border-color: $uni-border-color;
+
+/* 按钮颜色 */
+$dui-button-color-primary: $dui-color-primary;
+
+/* 水平间距 */
+$dui-spacing-row-sm: 14rpx;
+$dui-spacing-row-base: 28rpx;
+$dui-spacing-row-lg: 42rpx;
+
+/* 垂直间距 */
+$dui-spacing-col-sm: 14rpx;
+$dui-spacing-col-base: 28rpx;
+$dui-spacing-col-lg: 42rpx;
+

@@ -1,0 +1,97 @@
+@import 'mixins.scss';
+
+.container {
+	padding-left: $uni-spacing-row-base;
+	padding-right: $uni-spacing-row-base;
+}
+
+//  背景
+.bg-white {
+	background-color: $dui-bg-color-white;
+}
+
+.bg-grey {
+	background-color: $dui-bg-color-grey;
+}
+
+// text
+.text-hint {
+    color: $dui-text-color-hint;
+}
+
+.text-center {
+    text-align: center;
+}
+
+// margin-top
+.mt-sm {
+    margin-top: $dui-spacing-col-sm;
+}
+
+.mt {
+    margin-top: $dui-spacing-col-base;
+}
+
+.mt-lg {
+    margin-top: $dui-spacing-col-lg;
+}
+
+// margin-right
+.mr-sm {
+    margin-right: $dui-spacing-col-sm;
+}
+
+.mr {
+    margin-right: $dui-spacing-col-base;
+}
+
+.mr-lg {
+    margin-right: $dui-spacing-col-lg;
+}
+
+// padding-y
+.py {
+    padding-top: $dui-spacing-col-base;
+    padding-bottom: $dui-spacing-col-base;
+}
+
+// display
+.d-flex {
+    display: flex;
+}
+
+.justify-content-bewteen {
+    justify-content: space-between;
+}
+
+// align-items
+.align-items-center {
+    align-items: center;
+}
+
+.dui-form {
+	label {
+		width: 100;
+		display: flex;
+		align-items: center;
+		
+	}	
+}
+
+.border-top {
+    @include border-top();
+}
+
+.border-bottom {
+     @include border-bottom();
+}
+
+.border-y {
+    @include border-y();
+}
+
+// page-title
+.page-title {
+    font-size: $dui-font-size-base * 2;
+     margin-bottom: $dui-spacing-col-lg;
+}

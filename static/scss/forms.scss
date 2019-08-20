@@ -1,0 +1,10 @@
+.dui-form-item {
+    @include border-bottom();
+    
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    padding: 0 $dui-spacing-row-base;
+    font-size: $dui-font-size-base;
+    min-height: 48px;
+}

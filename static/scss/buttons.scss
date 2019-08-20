@@ -1,0 +1,83 @@
+@import 'vars.scss';
+
+.dui-button {
+
+	&:after {
+		content: none;
+		outline: 0;
+	}
+}
+
+@mixin button($bgColor, $textColor: #FFF) {
+	
+	display: inline-block;
+	color: $textColor !important;
+	background-color: $bgColor !important;
+	font-size: $dui-font-size-base;
+	
+	&.dui-button-outline {
+		color: $bgColor !important;
+		border: 1px solid $bgColor;
+		background-color: transparent !important;
+	
+		&:active {
+			color: $textColor !important;
+			background-color: darken($bgColor, 10%) !important;
+		}
+	
+		&.disabled {
+			color: rgba($bgColor, .5) !important;
+			border: 1px solid rgba($bgColor, .5);
+			background-color: transparent !important;
+	
+			&:active {
+				background-color: transparent !important;
+			}
+		}
+	}
+	
+	&:active {
+		color: $textColor !important;
+		background-color: darken($bgColor, 10%) !important;
+	}
+	
+	&.disabled {
+		background-color: rgba($bgColor, .5) !important;
+		color: rgba($textColor, .9) !important;
+	
+		&:active {
+			background-color: rgba($bgColor, .5) !important;
+		}
+	}
+
+}
+
+$buttons: (
+	'primary': $dui-color-primary,
+	'blue': $dui-color-blue,
+	'green': $dui-color-green,
+	'red': $dui-color-red,
+	'pink': $dui-color-pink,
+	'purple': $dui-color-purple,
+	'orange': $dui-color-orange,
+	'light': $dui-color-light,
+);
+
+@each $color, $value in $buttons {
+  .dui-button-#{$color} {
+    @include button($value);
+  }
+  
+}
+
+button {
+	@include button($dui-button-color-primary);
+	display: block !important;
+	font-size: $dui-font-size-lg !important;
+}
+
+
+.dui-button-block {
+	display: block !important;
+	font-size: $dui-font-size-lg !important;
+}

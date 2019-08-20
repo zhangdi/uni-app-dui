@@ -1,0 +1,54 @@
+<template>
+    <view class="dui-list-group">
+        <slot></slot>
+    </view>
+</template>
+
+<script>
+    export default {
+        props: {},
+        data() {
+            return {
+
+            };
+        }
+    }
+</script>
+
+<style lang="scss" scoped>
+    @import "../static/scss/dui.scss";
+
+    .dui-list-group {
+        background-color: $dui-bg-color-white;
+        position: relative;
+
+        &:before {
+            position: absolute;
+            z-index: 10;
+            right: 0;
+            top: 0;
+            left: 0;
+            height: 1px;
+            content: '';
+            -webkit-transform: scaleY(0.5);
+            transform: scaleY(0.5);
+            background-color: $dui-border-color;
+        }
+
+        &:after {
+            position: absolute;
+            z-index: 10;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            height: 1px;
+            content: '';
+            -webkit-transform: scaleY(0.5);
+            transform: scaleY(0.5);
+            background-color: $dui-border-color;
+        }
+
+    }
+    
+    
+</style>
