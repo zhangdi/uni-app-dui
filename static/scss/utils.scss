@@ -1,8 +1,8 @@
 @import 'mixins.scss';
 
 .container {
-	padding-left: $uni-spacing-row-base;
-	padding-right: $uni-spacing-row-base;
+	margin-left: $uni-spacing-row-base;
+	margin-right: $uni-spacing-row-base;
 }
 
 //  背景
@@ -17,6 +17,11 @@
 // text
 .text-hint {
     color: $dui-text-color-hint;
+	font-size: $dui-font-size-sm;
+}
+
+.text-title {
+	font-size: $dui-font-size-lg;
 }
 
 .text-center {
@@ -55,6 +60,12 @@
     padding-bottom: $dui-spacing-col-base;
 }
 
+.py-lg {
+    padding-top: $dui-spacing-col-lg;
+    padding-bottom: $dui-spacing-col-lg;
+}
+
+
 // display
 .d-flex {
     display: flex;
@@ -88,6 +99,10 @@
 
 .border-y {
     @include border-y();
+}
+
+.border-radius {
+	border-radius: 10upx;
 }
 
 // page-title
